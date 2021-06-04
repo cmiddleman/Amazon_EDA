@@ -4,7 +4,12 @@
     
     
     scrape data from amazon.com on items from a specific category like clothing/shirts
-    how does the price of an article of clothing change based on size and color (seperate tests for hue, sat, the other one).
-    
+    how does the price of an article of clothing change based on size and color (seperate tests for hue, sat, the other one)?
+ 
 2. https://www.kaggle.com/rtatman/188-million-us-wildfires
 
+    So many fires! How does frequency vary with location? Are fires more frequent in the winter or the summer (and does that vary by location)?
+    
+3. https://en.wikipedia.org/wiki/Main_Page Webscrape 10,000 random wikipedia articles. 
+
+    Are more than half of all wikipedia articles about peopl?!? Does length of article vary based on categorical information of the article?
