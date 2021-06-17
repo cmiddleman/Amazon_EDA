@@ -1,0 +1,50 @@
+https://www.amazon.com/Hanes-Short-Sleeve-Beefy-T-3X-Large/dp/B00JUM812S/ref=sr_1_10?dchild=1&qid=1623087932&rnid=2476517011&s=apparel&sr=1-10&th=1&psc=1
+
+https://www.amazon.com/Hanes-Short-Sleeve-Beefy-T-3X-Large/dp/B00JUM7N4K/ref=sr_1_10?dchild=1&qid=1623087932&rnid=2476517011&s=apparel&sr=1-10&th=1&psc=1
+
+
+https://www.amazon.com/Hanes-Short-Sleeve-Beefy-T-3X-Large/dp/B00JUM7I72/
+
+
+
+price location = #priceblock_ourprice
+
+t-shirt product ids start with 'B0' (no counter example found thus far)
+
+
+PROCEDURE:
+
+FOR EACH product in T-shirts:
+
+	GO TO (next) product (default) page
+	
+	FIND the group of available colors AS set of product ids to various colors sub-default page 
+	(ALONG with hexcodes?)
+	AT <ul class = unordered list, name : twister_color_name (DOESNT ALWAYS WORK) >/ 
+		data-defaultasin IF NOT NULL ELSE data-dp-url[slice 2nd to 3rd '/'] ELSE skip
+	
+	FOR EACH color_url in color_urls
+	
+		GO TO amazon.com/color_url
+		
+		GO TO table(?) named dropdown_selected_size_name
+		
+			GET data-a-html-content
+		
+		GET #priceblock_ourprice
+		
+		(later if time) GET other info like reviews
+		
+NOTES:
+	
+	divide price[color,size] / avg for that product
+	
+	cluster in RGB space or 
+		
+			
+EDGE CASES:
+	
+	T-shirt colors not colors (i.e. brown bear):
+		https://www.amazon.com/Oversized-Sublimated-T-Shirt-Animal-Timber/dp/B07CN73V7W/
+	no non-default colors
+		https://www.amazon.com/Lucky-Brand-Sleeve-Coyote-XX-Large/dp/B082K5BMWN/
